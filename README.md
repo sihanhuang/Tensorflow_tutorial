@@ -15,7 +15,7 @@ $ pip install tensorflow-gpu
 ```
 
 ### Test the TensorFlow installation
-##### (Optional, Linux) Enable GPU Support
+#### 1.(Optional, Linux) Enable GPU Support
 
 If you installed the GPU version of TensorFlow, you must also install the Cuda Toolkit 8.0 and cuDNN v5.1. 
 
