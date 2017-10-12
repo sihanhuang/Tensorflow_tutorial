@@ -36,9 +36,19 @@ Python 2.7.12 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:42:40)
 ```
 
 ```python
-import tensorflow as tf
-hello = tf.constant('Hello, TensorFlow!')
-sess = tf.Session()
+>>>import tensorflow as tf
+>>>hello = tf.constant('Hello, TensorFlow!')
+>>>sess = tf.Session()
+
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:8a:00.0
+Total memory: 11.20GiB
+Free memory: 11.13GiB
+2017-10-12 10:51:13.724565: I tensorflow/core/common_runtime/gpu/gpu_device.cc:976] DMA: 0 
+2017-10-12 10:51:13.724600: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 0:   Y 
+2017-10-12 10:51:13.724645: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:8a:00.0)
+
 ```
 
 
