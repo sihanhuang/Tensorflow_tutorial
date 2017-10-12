@@ -50,9 +50,17 @@ Free memory: 11.13GiB
 2017-10-12 10:51:13.724565: I tensorflow/core/common_runtime/gpu/gpu_device.cc:976] DMA: 0 
 2017-10-12 10:51:13.724600: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 0:   Y 
 2017-10-12 10:51:13.724645: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:8a:00.0)
-
 ```
 
+``` python
+print(sess.run(hello))
+```
+```
+Hello, TensorFlow!
+```
+
+
+### Jupyter notebook
 
 
 
