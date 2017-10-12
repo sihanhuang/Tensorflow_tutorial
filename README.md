@@ -14,17 +14,27 @@ $ pip install tensorflow
 $ pip install tensorflow-gpu
 ```
 
-### Test the TensorFlow installation
-#### (Optional, Linux) Enable GPU Support
+### Import tensorflow on GPU node
 
-In order to build or run TensorFlow with GPU support, both NVIDIA's Cuda Toolkit (>= 7.0) and cuDNN (>= v3) need to be installed.
+First request a GPU node on Habanero (use "stats" if you are a member of "stats" group, otherwise use your group name):
+```bash
+$ srun --pty -t 0-02:00:00 --gres=gpu:1 -A stats /bin/bash
+```
+Load these modules:
+```bash
+$ module load cuda80/toolkit cuda80/blas cudnn/6.0_8
+$ module load anaconda/2-4.2.0
+```
+Install tensorflow-gpu as user (this can take few minutes, please wait - you need to do it only once):
+```bash
+$ pip install tensorflow-gpu --user
+```
+Start python and test tensorflow
+```bash
+$ python
+Python 2.7.12 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:42:40) 
+```
 
-TensorFlow GPU support requires having a GPU card with NVidia Compute Capability (>= 3.0). Supported cards include but are not limited to:
-
-* NVidia Titan
-* NVidia Titan X
-* NVidia K20
-* NVidia K40
 
 
 
