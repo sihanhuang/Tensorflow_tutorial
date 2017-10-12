@@ -21,10 +21,10 @@ In order to build or run TensorFlow with GPU support, both NVIDIA's Cuda Toolkit
 
 TensorFlow GPU support requires having a GPU card with NVidia Compute Capability (>= 3.0). Supported cards include but are not limited to:
 
-..* NVidia Titan
-..* NVidia Titan X
-..* NVidia K20
-..* NVidia K40
+⋅⋅* NVidia Titan
+⋅⋅* NVidia Titan X
+⋅⋅* NVidia K20
+⋅⋅* NVidia K40
 
 
 
