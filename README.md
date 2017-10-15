@@ -65,10 +65,3 @@ print(sess.run(hello))
 ```
 Hello, TensorFlow!
 ```
-
-
-### Jupyter notebook
-
-
-
-
