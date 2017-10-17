@@ -21,20 +21,16 @@ sess = tf.Session()
 print(sess.run(hello))
 ```
 
-### Import tensorflow on GPU node
+### Import tensorflow on Habanero
 
-First request a GPU node on Habanero (use "stats" if you are a member of "stats" group, otherwise use your group name):
+Load anaconda:
 ```bash
-$ srun --pty -t 0-02:00:00 --gres=gpu:1 -A stats /bin/bash
+$ module load anaconda
 ```
-Load these modules:
+Install tensorflow and tensorflow-gpu (this can take few minutes, please wait - you need to do it only once):
 ```bash
-$ module load cuda80/toolkit cuda80/blas cudnn/6.0_8
-$ module load anaconda/2-4.2.0
-```
-Install tensorflow-gpu as user (this can take few minutes, please wait - you need to do it only once):
-```bash
-$ pip install tensorflow-gpu --user
+$ pip install tensorflow
+$ pip install tensorflow-gpu 
 ```
 Start python and test tensorflow
 ```bash
@@ -47,21 +43,17 @@ Python 2.7.12 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:42:40)
 >>> hello = tf.constant('Hello, TensorFlow!')
 >>> sess = tf.Session()
 ```
-You will see the following output:
-```
-name: Tesla K80
-major: 3 minor: 7 memoryClockRate (GHz) 0.8235
-pciBusID 0000:8a:00.0
-Total memory: 11.20GiB
-Free memory: 11.13GiB
-2017-10-12 10:51:13.724565: I tensorflow/core/common_runtime/gpu/gpu_device.cc:976] DMA: 0 
-2017-10-12 10:51:13.724600: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 0:   Y 
-2017-10-12 10:51:13.724645: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:8a:00.0)
+
+If you don't want warnings, you can add this at the beginning
+```python
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 ```
 
 ``` python
 print(sess.run(hello))
 ```
+You will see
 ```
 Hello, TensorFlow!
 ```
