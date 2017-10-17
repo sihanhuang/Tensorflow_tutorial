@@ -15,10 +15,10 @@ $ pip install tensorflow-gpu
 ```
 To validate your installation, enter the following short program inside the python interactive shell:
 ```python
-import tensorflow as tf
-hello = tf.constant('Hello, TensorFlow!')
-sess = tf.Session()
-print(sess.run(hello))
+>>> import tensorflow as tf
+>>> hello = tf.constant('Hello, TensorFlow!')
+>>> sess = tf.Session()
+>>> print(sess.run(hello))
 ```
 
 ### Import tensorflow on Habanero
