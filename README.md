@@ -46,12 +46,12 @@ Python 2.7.12 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:42:40)
 
 If you don't want warnings, you can add this at the beginning
 ```python
-import os
-os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
+>>> import os
+>>> os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 ```
 
 ``` python
-print(sess.run(hello))
+>>> print(sess.run(hello))
 ```
 You will see
 ```
