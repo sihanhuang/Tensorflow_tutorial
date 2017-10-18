@@ -68,5 +68,10 @@ You will see
 ```
 Hello, TensorFlow!
 ```
+To run python script
+
+
 
 ### Submitting jobs
+
+``` 
