@@ -76,9 +76,15 @@ If there are warnings, you can add this at the beginning of your .py file:
 >>> print(sess.run(hello))
 Hello, TensorFlow!
 ```
-To run python script
+To run a python script, simply use
+```bash
+$ CUDA_VISIBLE_DEVICES=0 python Hello.py
+```
 
-
+If you want to submit the job using a bash file, you can use
+```bash
+sbatch gpu.sh
+```
 
 ### Submitting jobs
 
