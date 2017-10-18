@@ -40,7 +40,7 @@ $ pip install tensorflow-gpu
 ```
 
 ### Use TensorFlow on Habanero (3 ways)
-1. Start Python directly
+#### 1. Start Python directly
 ```bash
 $ python
 Python 3.5.2 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:53:06) 
@@ -75,7 +75,7 @@ If there are warnings, you can add this at the beginning of your .py file:
 Hello, TensorFlow!
 ```
 
-2. Run an existed Python script
+#### 2. Run an existed Python script
 To do this, simply use
 ```bash
 $ python Hello.py
@@ -85,7 +85,7 @@ Does your CUDA application need to target a specific GPU? If you are writing GPU
 $ CUDA_VISIBLE_DEVICES=1 python Hello.py
 ```
 
-3. Submitting Jobs
+#### 3. Submitting Jobs
 If you want to submit the job using a bash file, you can use
 ```bash
 sbatch gpu.sh
