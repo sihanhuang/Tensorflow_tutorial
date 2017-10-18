@@ -53,6 +53,9 @@ Python 3.5.2 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:53:06)
 >>> import tensorflow as tf
 >>> hello = tf.constant('Hello, TensorFlow!')
 >>> sess = tf.Session()
+```
+You set it up successfully if you see the following output.
+```
 Found device 0 with properties: 
 name: Tesla K80
 major: 3 minor: 7 memoryClockRate (GHz) 0.8235
