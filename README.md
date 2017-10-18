@@ -38,7 +38,9 @@ Install tensorflow and tensorflow-gpu (this can take few minutes, please wait - 
 $ pip install tensorflow
 $ pip install tensorflow-gpu 
 ```
-Start python and test tensorflow
+
+### Use TensorFlow on Habanero (3 ways)
+1. Start Python directly
 ```bash
 $ python
 Python 3.5.2 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:53:06) 
@@ -73,22 +75,29 @@ If there are warnings, you can add this at the beginning of your .py file:
 Hello, TensorFlow!
 ```
 
-If you want to check the GPU process, use screen to do it in another screen:
+2. Run an existed Python script
+To do this, simply use
 ```bash
-$ screen
+$ python Hello.py
 ```
-You can use ```Ctrl+a+c```to create another screen.
-
-To run a python script, simply use
+Does your CUDA application need to target a specific GPU? If you are writing GPU enabled code, you would typically use a device query to select the desired GPUs. However, a quick and easy solution for testing is to use the environment variable ```CUDA_VISIBLE_DEVICES``` to restrict the devices that your CUDA application sees. This can be useful if you are attempting to share resources on a node or you want your GPU enabled executable to target a specific GPU.
 ```bash
-$ CUDA_VISIBLE_DEVICES=0 python Hello.py
+$ CUDA_VISIBLE_DEVICES=1 python Hello.py
 ```
 
+3. Submitting Jobs
 If you want to submit the job using a bash file, you can use
 ```bash
 sbatch gpu.sh
 ```
 
-### Submitting jobs
-
-``` 
+### Monitoring GPU devices
+The NVIDIA System Management Interface (nvidia-smi) is a command line utility, based on top of the NVIDIA Management Library (NVML), intended to aid in the management and monitoring of NVIDIA GPU devices. Firstly, create a new screen under the same session:
+```bash
+$ screen
+```
+Then you can use ```Ctrl+a+c``` to create another screen. You can also use ```Ctrl+a+n``` or ```Ctrl+a+p``` to switch among screens. To monitor your GPU devices, you should run
+```bash
+$ nvidia-smi
+```
+in a new screen when you run your program.
