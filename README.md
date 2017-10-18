@@ -103,5 +103,6 @@ $ nvidia-smi
 in a new screen when the program is under process.
 
 ### Useful Link
-https://www.tensorflow.org/
-https://confluence.columbia.edu/confluence/display/rcs/Habanero+-+Job+Examples#Habanero-JobExamples-Tensorflow
+TensorFlow: https://www.tensorflow.org/
+
+Habanero: https://confluence.columbia.edu/confluence/display/rcs/Habanero+-+Job+Examples#Habanero-JobExamples-Tensorflow
