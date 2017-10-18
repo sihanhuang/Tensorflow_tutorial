@@ -23,7 +23,7 @@ To validate your installation, enter the following short program inside the pyth
 ### Import TensorFlow on Habanero
 To login interactively to a GPU node, run the following command, replacing stats with your account.
 ```bash
-$ srun --pty -t 0-01:00 --gres=gpu:1 -A <ACCOUNT> /bin/bash
+$ srun --pty -t 0-01:00 --gres=gpu:1 -A stats /bin/bash
 ```
 
 Load anaconda:
