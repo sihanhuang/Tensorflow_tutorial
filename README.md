@@ -100,4 +100,4 @@ Then you can use ```Ctrl+a+c``` to create another screen. You can also use ```Ct
 ```bash
 $ nvidia-smi
 ```
-in a new screen when you run your program.
+in a new screen when the program is under process.
