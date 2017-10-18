@@ -53,6 +53,15 @@ Python 3.5.2 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:53:06)
 >>> import tensorflow as tf
 >>> hello = tf.constant('Hello, TensorFlow!')
 >>> sess = tf.Session()
+Found device 0 with properties: 
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:8a:00.0
+Total memory: 11.20GiB
+Free memory: 11.13GiB
+2017-10-18 12:24:17.232879: I tensorflow/core/common_runtime/gpu/gpu_device.cc:976] DMA: 0 
+2017-10-18 12:24:17.232917: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 0:   Y 
+2017-10-18 12:24:17.232984: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:8a:00.0)
 ```
 
 If there are warnings, you can add this at the beginning of your .py file:
@@ -63,9 +72,6 @@ If there are warnings, you can add this at the beginning of your .py file:
 
 ``` python
 >>> print(sess.run(hello))
-```
-You will see
-```
 Hello, TensorFlow!
 ```
 To run python script
