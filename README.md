@@ -101,3 +101,7 @@ Then you can use ```Ctrl+a+c``` to create another screen. You can also use ```Ct
 $ nvidia-smi
 ```
 in a new screen when the program is under process.
+
+### Useful Link
+https://www.tensorflow.org/
+https://confluence.columbia.edu/confluence/display/rcs/Habanero+-+Job+Examples#Habanero-JobExamples-Tensorflow
