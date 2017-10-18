@@ -72,6 +72,13 @@ If there are warnings, you can add this at the beginning of your .py file:
 >>> print(sess.run(hello))
 Hello, TensorFlow!
 ```
+
+If you want to check the GPU process, use screen to do it in another screen:
+```bash
+$ screen
+```
+You can use ```Ctrl+a+c```to create another screen.
+
 To run a python script, simply use
 ```bash
 $ CUDA_VISIBLE_DEVICES=0 python Hello.py
