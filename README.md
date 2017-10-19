@@ -12,6 +12,12 @@ You can simply install tensorflow on Linux, Mac or Windows with pip install. Not
 $ pip install tensorflow
 $ pip install tensorflow-gpu
 ```
+If you get the error "Permission denied", you can install by 
+```bash
+$ sudo pip install tensorflow
+$ sudo pip install tensorflow-gpu
+```
+
 To validate your installation, enter the following short program inside the python interactive shell:
 ```python
 >>> import tensorflow as tf
