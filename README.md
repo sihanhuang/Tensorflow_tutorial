@@ -25,6 +25,7 @@ To validate your installation, enter the following short program inside the pyth
 >>> sess = tf.Session()
 >>> print(sess.run(hello))
 ```
+If your system is window, you can turn to this [link](https://www.tensorflow.org/install/install_windows).
 
 ### Import TensorFlow on Habanero
 To login interactively to a GPU node, run the following command, replacing stats with your account.
